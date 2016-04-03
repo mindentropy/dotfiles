@@ -1,0 +1,60 @@
+set nu
+set showcmd
+set showmatch
+set tabstop=4
+set hlsearch
+set ai
+set mouse=a
+set autowriteall
+set incsearch
+set hidden
+syntax on
+set background=light
+
+set cst
+"set guioptions-=m "Remove menu bar
+set guioptions-=T "Remove tool bar
+
+nnoremap <F2> :buffers<CR>:buffer<SPACE>
+nnoremap <F3> :NERDTreeToggle<CR>
+
+nnoremap <F4> :!make clean<CR>
+nnoremap <F5> :!make<CR>
+
+nnoremap <F7> :cs reset<CR>
+
+nnoremap <F9> :vnew<CR>:read !svn diff<CR>:set syntax=diff buftype=nofile<CR>gg
+
+nnoremap <F11> :cscope<SPACE>add<SPACE>cscope.out<CR>
+nnoremap <F12> :cs<SPACE>reset<CR>
+
+nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
+
+nmap <F8> :TagbarToggle<CR>
+
+nnoremap <C-S-t> :tabnew<CR>
+nnoremap <S-h> gT
+nnoremap <S-l> gt
+
+nnoremap <S-F1> 1gt
+nnoremap <S-F2> 2gt
+nnoremap <S-F3> 3gt
+nnoremap <S-F4> 4gt
+nnoremap <S-F5> 5gt
+nnoremap <S-F6> 6gt
+nnoremap <S-F7> 7gt
+nnoremap <S-F8> 8gt
+nnoremap <S-F9> 9gt
+
+
+set laststatus=1
+set mousehide
+set autowriteall
+set noswapfile
+"set mousefocus
+let NERDTreeWinPos="right"
+let NERDTreeQuitOnOpen=1
+let g:autosave=1
+augroup filetypedetect
+	au! BufRead,BufNewFile *.m,*.oct set filetype=octave
+augroup END
