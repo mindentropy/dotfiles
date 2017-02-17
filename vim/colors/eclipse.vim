@@ -43,7 +43,7 @@ highlight DiffAdd    gui=none guifg=blue  guibg=#e7e7ff ctermbg=green cterm=bold
 
 " Cursor
 "highlight Cursor   gui=none guifg=#ffffff guibg=#0080f0
-highlight Cursor   gui=none guifg=#ffffff guibg=#c80000
+highlight Cursor   gui=none guifg=#ffffff guibg=#0DB0DE
 highlight lCursor  gui=none guifg=#ffffff guibg=#8040ff
 highlight CursorIM gui=none guifg=#ffffff guibg=#8040ff
 
@@ -65,7 +65,7 @@ highlight LineNr     gui=none guifg=#ac0000 guibg=#ffffff
 "highlight NonText    gui=none guifg=#707070 guibg=#e7e7e7
 highlight NonText    gui=none guifg=#707070 guibg=#ffffff
 highlight SpecialKey gui=none guifg=#c0c0c0 guibg=bg      cterm=none       ctermfg=4
-highlight Title      gui=bold guifg=#0033cc guibg=bg
+highlight Title      gui=bold guifg=#1b88cc guibg=bg
 highlight Visual     gui=none guifg=#804020 guibg=#ffc0a0 ctermfg=DarkCyan
 
 " Syntax group
@@ -84,16 +84,17 @@ highlight Ignore     gui=none guifg=bg      guibg=bg      ctermfg=black
 highlight PreProc    gui=none guifg=#1B4F7F guibg=bg      ctermfg=Green
 highlight Special    gui=none guifg=#8040f0 guibg=bg      ctermfg=DarkMagenta
 "highlight Statement  gui=none guifg=#b64f90 guibg=bg      ctermfg=White
-highlight Statement  gui=bold guifg=#800000 guibg=bg      ctermfg=White
+highlight Statement  gui=none guifg=#800000 guibg=bg      ctermfg=White
 highlight Todo       gui=none guifg=#ff5050 guibg=white   term=standout       ctermbg=Yellow ctermfg=Black
 "highlight Type       gui=bold guifg=#7f0055 guibg=bg      ctermfg=LightGreen
-highlight Type       gui=bold guifg=#007000 guibg=bg      ctermfg=LightGreen
+highlight Type       gui=none guifg=#007000 guibg=bg      ctermfg=LightGreen
 highlight Underlined gui=none guifg=blue    guibg=bg
 "highlight String     gui=none guifg=#8010a0 guibg=bg      ctermfg=Yellow
-highlight String     gui=none guifg=#b40407 guibg=bg      ctermfg=Yellow
+"highlight String     gui=none guifg=#b40407 guibg=bg      ctermfg=Yellow
+highlight String     gui=none guifg=#dd1144 guibg=bg      ctermfg=Yellow
 "highlight Number     gui=none guifg=#0000ff guibg=bg      ctermfg=White
 "highlight Number     gui=none guifg=#0000a0 guibg=bg      ctermfg=White
-highlight Number     gui=none guifg=#0e1e8c guibg=bg      ctermfg=White
+highlight Number     gui=none guifg=#0f69a1 guibg=bg      ctermfg=White
 
 if !has("gui_running")
     hi link Float          Number
