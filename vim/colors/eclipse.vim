@@ -84,10 +84,10 @@ highlight Ignore     gui=none guifg=bg      guibg=bg      ctermfg=black
 highlight PreProc    gui=none guifg=#1B4F7F guibg=bg      ctermfg=Green
 highlight Special    gui=none guifg=#8040f0 guibg=bg      ctermfg=DarkMagenta
 "highlight Statement  gui=none guifg=#b64f90 guibg=bg      ctermfg=White
-highlight Statement  gui=none guifg=#800000 guibg=bg      ctermfg=White
+highlight Statement  gui=bold guifg=#008080 guibg=bg      ctermfg=White
 highlight Todo       gui=none guifg=#ff5050 guibg=white   term=standout       ctermbg=Yellow ctermfg=Black
 "highlight Type       gui=bold guifg=#7f0055 guibg=bg      ctermfg=LightGreen
-highlight Type       gui=none guifg=#007000 guibg=bg      ctermfg=LightGreen
+highlight Type       gui=bold guifg=#445588 guibg=bg      ctermfg=12
 highlight Underlined gui=none guifg=blue    guibg=bg
 "highlight String     gui=none guifg=#8010a0 guibg=bg      ctermfg=Yellow
 "highlight String     gui=none guifg=#b40407 guibg=bg      ctermfg=Yellow
@@ -95,6 +95,9 @@ highlight String     gui=none guifg=#dd1144 guibg=bg      ctermfg=Yellow
 "highlight Number     gui=none guifg=#0000ff guibg=bg      ctermfg=White
 "highlight Number     gui=none guifg=#0000a0 guibg=bg      ctermfg=White
 highlight Number     gui=none guifg=#0f69a1 guibg=bg      ctermfg=White
+highlight StorageClass gui=none guifg=#008080 guibg=bg	ctermfg=White
+"highlight Label gui=none guifg=#ff0000 guibg=bg ctermfg=White
+highlight Label gui=none guifg=#f36513 guibg=bg ctermfg=White
 
 if !has("gui_running")
     hi link Float          Number
@@ -102,7 +105,7 @@ if !has("gui_running")
     hi link Include        PreProc
     hi link Macro          PreProc
     hi link PreCondit      PreProc
-    hi link StorageClass   Type
+"    hi link StorageClass   Type
     hi link Structure      Type
     hi link Typedef        Type
     hi link Tag            Special
