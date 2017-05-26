@@ -69,7 +69,7 @@ highlight Title      gui=bold guifg=#1b88cc guibg=bg
 highlight Visual     gui=none guifg=#804020 guibg=#ffc0a0 ctermfg=DarkCyan
 
 " Syntax group
-highlight Comment    gui=none guifg=#5D5D5D guibg=bg      ctermfg=2
+highlight Comment    gui=none guifg=#3e3e3e guibg=bg      ctermfg=2
 highlight Constant   gui=none guifg=#00884c guibg=bg      ctermfg=White
 highlight Error      gui=none guifg=#f8f8f8 guibg=#4040ff term=reverse        ctermbg=Red    ctermfg=White
 highlight Identifier gui=none guifg=#b6890b guibg=bg      ctermfg=Green
