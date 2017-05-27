@@ -1,10 +1,11 @@
 " Vim color file
-" Maintainer:	Juan frias <juandfrias at gmail dot com>
-" Last Change:	2007 Feb 25
-" Version:	1.0.1
-" URL:		http://www.axisym3.net/jdany/vim-the-editor/#eclipse
+" Maintainer:	mindentropy <mindentropy at gmail dot com>
+" Last Change:	2017 May 27
 "
-" Customized by mindentropy.
+" Inspiration and modification of the base file taken from eclipse.vim by Juan
+" Frias
+"
+" Color matching done using colorsafe.co http://colorsafe.co
 "
 set background=light
 highlight clear
@@ -12,9 +13,8 @@ if exists("syntax_on")
     syntax reset
 endif
 
-let g:colors_name = "eclipse"
+let g:colors_name = "mindentropy"
 
-"highlight Normal gui=none guifg=#000000 guibg=#ffffff ctermfg=Grey
 highlight Normal gui=none guifg=#000000 guibg=#ffffff ctermfg=White
 
 " Search
@@ -30,7 +30,6 @@ highlight Question   gui=none guifg=#8000ff guibg=bg
 
 " Split area
 highlight StatusLine   gui=none guifg=#ffffff guibg=#4570aa cterm=bold       ctermbg=blue     ctermfg=white
-"highlight StatusLine   gui=none guifg=#ffffff guibg=#D40003 cterm=bold       ctermbg=darkred 	ctermfg=white
 highlight StatusLineNC gui=none guifg=#ffffff guibg=#75a0da cterm=none       ctermfg=darkgrey 	ctermbg=blue
 highlight VertSplit    gui=none guifg=#f8f8f8 guibg=#904838 ctermfg=darkgrey cterm=none       ctermbg=blue
 highlight WildMenu     gui=none guifg=#f8f8f8 guibg=#ff3030
@@ -42,7 +41,6 @@ highlight DiffDelete gui=none guifg=bg    guibg=#e7e7ff ctermbg=black
 highlight DiffAdd    gui=none guifg=blue  guibg=#e7e7ff ctermbg=green cterm=bold
 
 " Cursor
-"highlight Cursor   gui=none guifg=#ffffff guibg=#0080f0
 highlight Cursor   gui=none guifg=#ffffff guibg=#0DB0DE
 highlight lCursor  gui=none guifg=#ffffff guibg=#8040ff
 highlight CursorIM gui=none guifg=#ffffff guibg=#8040ff
@@ -58,11 +56,8 @@ highlight PMenuSBar  ctermbg=red   ctermfg=white
 highlight PMenuThumb ctermbg=white ctermfg=red
 
 " Other
-"highlight Directory  gui=none guifg=#7050ff guibg=bg
 highlight Directory  gui=none guifg=#3a2984 guibg=bg
-"highlight LineNr     gui=none guifg=#6b6b6b guibg=#eeeeee
 highlight LineNr     gui=none guifg=#a74165 guibg=#ffffff
-"highlight NonText    gui=none guifg=#707070 guibg=#e7e7e7
 highlight NonText    gui=none guifg=#707070 guibg=#ffffff
 highlight SpecialKey gui=none guifg=#c0c0c0 guibg=bg      cterm=none       ctermfg=4
 highlight Title      gui=bold guifg=#1b88cc guibg=bg
@@ -76,14 +71,14 @@ highlight Identifier gui=none guifg=#b6890b guibg=bg      ctermfg=Green
 highlight Ignore     gui=none guifg=bg      guibg=bg      ctermfg=black
 highlight PreProc    gui=none guifg=#1B4F7F guibg=bg      ctermfg=Green
 highlight Special    gui=none guifg=#0f69a1 guibg=bg      ctermfg=DarkMagenta
-highlight Statement  gui=bold guifg=#008080 guibg=bg      ctermfg=White
+highlight Statement  gui=bold guifg=#a74165 guibg=bg      ctermfg=White
 highlight Todo       gui=none guifg=#ff5050 guibg=white   term=standout       ctermbg=Yellow ctermfg=Black
 highlight Type       gui=bold guifg=#445588 guibg=bg      ctermfg=12
 highlight Underlined gui=none guifg=blue    guibg=bg
-highlight String     gui=none guifg=#dd1144 guibg=bg      ctermfg=Yellow
-highlight Number     gui=none guifg=#004055 guibg=bg      ctermfg=White
-highlight StorageClass gui=none guifg=#008080 guibg=bg	ctermfg=White
-highlight Label gui=none guifg=#f36513 guibg=bg ctermfg=White
+highlight String     gui=none guifg=#007a7c guibg=bg      ctermfg=Yellow
+highlight Number     gui=none guifg=#db0a5b guibg=bg      ctermfg=White
+highlight StorageClass gui=none guifg=#aa0000 guibg=bg	ctermfg=White
+highlight Label gui=none guifg=#008080 guibg=bg ctermfg=White
 highlight Function gui=none guifg=#522032 guibg=bg ctermfg=Black
 
 if !has("gui_running")
