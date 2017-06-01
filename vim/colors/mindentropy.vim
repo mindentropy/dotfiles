@@ -61,7 +61,7 @@ highlight LineNr     gui=none guifg=#a74165 guibg=#ffffff
 highlight NonText    gui=none guifg=#707070 guibg=#ffffff
 highlight SpecialKey gui=none guifg=#c0c0c0 guibg=bg      cterm=none       ctermfg=4
 highlight Title      gui=bold guifg=#1b88cc guibg=bg
-highlight Visual     gui=none guifg=#804020 guibg=#ffc0a0 ctermfg=DarkCyan
+highlight Visual     gui=none guifg=#002627 guibg=#ffb70f ctermfg=DarkCyan
 
 " Syntax group
 highlight Comment    gui=none guifg=#3e3e3e guibg=bg      ctermfg=2
