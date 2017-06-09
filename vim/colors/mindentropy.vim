@@ -57,7 +57,7 @@ highlight PMenuThumb ctermbg=white ctermfg=red
 
 " Other
 highlight Directory  gui=none guifg=#3a2984 guibg=bg
-highlight LineNr     gui=none guifg=#a74165 guibg=#ffffff
+highlight LineNr     gui=none guifg=#d05d10 guibg=#ffffff
 highlight NonText    gui=none guifg=#707070 guibg=#ffffff
 highlight SpecialKey gui=none guifg=#c0c0c0 guibg=bg      cterm=none       ctermfg=4
 highlight Title      gui=bold guifg=#1b88cc guibg=bg
