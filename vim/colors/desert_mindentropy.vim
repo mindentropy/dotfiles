@@ -38,6 +38,8 @@ hi Conditional  guifg=#bf6ee0 gui=none
 hi Boolean	guifg=#e6cc22 gui=none
 hi Number 	guifg=#ffd700 gui=none
 "hi LineNr
+hi Operator 	guifg=#fc6399 gui=none
+hi Function	guifg=#00d080 gui=none
 hi Repeat 	guifg=#f4a460 gui=none
 hi ModeMsg	guifg=goldenrod
 hi MoreMsg	guifg=SeaGreen
