@@ -66,7 +66,8 @@ hi Identifier	guifg=palegreen
 "hi Statement	guifg=#5accec gui=none
 hi Statement	guifg=#ff6347 gui=none
 hi Operator     guifg=#e8dd75
-hi PreProc	guifg=indianred
+"hi PreProc	guifg=indianred
+hi PreProc 	guifg=#1e90ff gui=none
 "hi Type		guifg=darkkhaki
 hi StorageClass guifg=darkkhaki
 "hi Type		guifg=#5accec
