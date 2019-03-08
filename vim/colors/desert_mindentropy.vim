@@ -19,7 +19,8 @@ if version > 580
 endif
 let g:colors_name="desert"
 
-hi Normal	guifg=#FFFFFF guibg=#212121
+"hi Normal	guifg=#FFFFFF guibg=#212121
+hi Normal	guifg=#FFFFFF guibg=#1e1e1e
 
 " highlight groups
 hi Cursor	guibg=khaki guifg=slategrey
@@ -36,10 +37,11 @@ hi FoldColumn	guibg=grey30 guifg=tan
 hi IncSearch	guifg=slategrey guibg=khaki
 hi Conditional  guifg=#bf6ee0 gui=none
 hi Boolean	guifg=#e6cc22 gui=none
-hi Number 	guifg=#ffd700 gui=none
+hi Number 	guifg=#f1f227 gui=none
 "hi LineNr
 hi Operator 	guifg=#fc6399 gui=none
-hi Function	guifg=#00d080 gui=none
+"hi Function	guifg=#00d080 gui=none
+hi Function	guifg=#00fa9a gui=none
 hi Repeat 	guifg=#f4a460 gui=none
 hi ModeMsg	guifg=goldenrod
 hi MoreMsg	guifg=SeaGreen
@@ -64,7 +66,8 @@ hi Constant	guifg=#00ffff
 hi Identifier	guifg=palegreen
 "hi Statement	guifg=khaki
 "hi Statement	guifg=#5accec gui=none
-hi Statement	guifg=#ff6347 gui=none
+"hi Statement	guifg=#ff6347 gui=none
+hi Statement	guifg=#ffa070 gui=none
 hi Operator     guifg=#e8dd75
 "hi PreProc	guifg=indianred
 hi PreProc 	guifg=#1e90ff gui=none
