@@ -15,7 +15,7 @@ endif
 
 let g:colors_name = "mindentropy"
 
-highlight Normal gui=none guifg=#181818 guibg=#f9f9f9 ctermfg=White
+highlight Normal gui=none guifg=#181818 guibg=#ffffff ctermfg=White
 
 " Search
 highlight IncSearch gui=underline guifg=#404040 guibg=#e0e040
@@ -50,6 +50,7 @@ highlight Folded     gui=none guifg=#804030 guibg=#fff0d0 ctermbg=black ctermfg=
 highlight FoldColumn gui=none guifg=#6b6b6b guibg=#e7e7e7 ctermfg=black ctermbg=white
 
 " Popup Menu
+
 highlight PMenu      ctermbg=green ctermfg=white
 highlight PMenuSel   ctermbg=white ctermfg=black
 highlight PMenuSBar  ctermbg=red   ctermfg=white
@@ -72,7 +73,7 @@ highlight Ignore     gui=none guifg=bg      guibg=bg      ctermfg=black
 highlight PreProc    gui=none guifg=#1B4F7F guibg=bg      ctermfg=Green
 highlight Special    gui=none guifg=#0f69a1 guibg=bg      ctermfg=DarkMagenta
 "highlight Statement  gui=none guifg=#7d314c guibg=bg      ctermfg=White
-highlight Statement  gui=none guifg=#8b0000 guibg=bg      ctermfg=White
+highlight Statement  gui=none guifg=#aa0000 guibg=bg      ctermfg=White
 highlight Todo       gui=none guifg=#ff5050 guibg=#eeeeee   term=standout ctermbg=Yellow ctermfg=Black
 highlight Type       gui=none guifg=#445588 guibg=bg      ctermfg=12
 highlight Underlined gui=none guifg=blue    guibg=bg
