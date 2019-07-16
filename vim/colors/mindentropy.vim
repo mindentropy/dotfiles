@@ -18,8 +18,10 @@ let g:colors_name = "mindentropy"
 highlight Normal gui=none guifg=#181818 guibg=#ffffff ctermfg=White
 
 " Search
-highlight IncSearch gui=underline guifg=#404040 guibg=#e0e040
-highlight Search    gui=none      guifg=#544060 guibg=#f0c0ff ctermbg=1
+"highlight IncSearch gui=underline guifg=#404040 guibg=#e0e040
+highlight IncSearch gui=underline guifg=#FFFFFF guibg=#B3475B
+"highlight Search    gui=none      guifg=#544060 guibg=#f0c0ff ctermbg=1
+highlight Search    gui=none      guifg=black guibg=#FF8097 ctermbg=1
 
 " Messages
 highlight ErrorMsg   gui=none guifg=#f8f8f8 guibg=#4040ff
@@ -50,8 +52,7 @@ highlight Folded     gui=none guifg=#804030 guibg=#fff0d0 ctermbg=black ctermfg=
 highlight FoldColumn gui=none guifg=#6b6b6b guibg=#e7e7e7 ctermfg=black ctermbg=white
 
 " Popup Menu
-
-highlight PMenu      ctermbg=green ctermfg=white
+highlight PMenu      ctermbg=green ctermfg=white guibg=black guifg=yellow
 highlight PMenuSel   ctermbg=white ctermfg=black
 highlight PMenuSBar  ctermbg=red   ctermfg=white
 highlight PMenuThumb ctermbg=white ctermfg=red
