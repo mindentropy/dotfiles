@@ -15,7 +15,7 @@ endif
 
 let g:colors_name = "mindentropy"
 
-highlight Normal gui=none guifg=#181818 guibg=#ffffff ctermfg=White
+highlight Normal gui=none guifg=#000000 guibg=#ffffff ctermfg=White
 
 " Search
 "highlight IncSearch gui=underline guifg=#404040 guibg=#e0e040
@@ -59,7 +59,7 @@ highlight PMenuThumb ctermbg=white ctermfg=red
 
 " Other
 highlight Directory  gui=none guifg=#3a2984 guibg=bg
-highlight LineNr     gui=none guifg=#d05d10 guibg=#eeeeee
+highlight LineNr     gui=none guifg=#d05d10 guibg=#ffffff
 highlight NonText    gui=none guifg=#707070 guibg=#eeeeee
 highlight SpecialKey gui=none guifg=#c0c0c0 guibg=bg      cterm=none       ctermfg=4
 highlight Title      gui=bold guifg=#1b88cc guibg=bg
@@ -82,7 +82,8 @@ highlight String     gui=none guifg=#007a7c guibg=bg      ctermfg=Yellow
 highlight Number     gui=none guifg=#db0a5b guibg=bg      ctermfg=White
 highlight StorageClass gui=none guifg=#aa0000 guibg=bg	ctermfg=White
 highlight Label gui=none guifg=#008080 guibg=bg ctermfg=White
-highlight Function gui=none guifg=#114c2a guibg=bg ctermfg=Black
+"highlight Function gui=none guifg=#114c2a guibg=bg ctermfg=Black
+highlight Function gui=none guifg=#134d13 guibg=bg ctermfg=Black
 highlight Operator guifg=#d43900
 
 if !has("gui_running")
