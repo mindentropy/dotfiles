@@ -81,6 +81,8 @@ set noswapfile
 let NERDTreeWinPos="right"
 let NERDTreeQuitOnOpen=1
 let g:autosave=1
+let g:airline_theme='cobalt2'
+
 augroup filetypedetect
 	au! BufRead,BufNewFile *.m,*.oct set filetype=octave
 augroup END
