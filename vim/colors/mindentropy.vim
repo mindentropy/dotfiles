@@ -70,7 +70,7 @@ highlight EndOfBuffer gui=none guifg=#ff0000
 highlight Comment    gui=none guifg=#555555 guibg=bg      ctermfg=2
 highlight Constant   gui=none guifg=#00884c guibg=bg      ctermfg=White
 highlight Error      gui=none guifg=#f8f8f8 guibg=#4040ff term=reverse ctermbg=Red    ctermfg=White
-highlight Identifier gui=none guifg=#b6890b guibg=bg      ctermfg=Green
+highlight Identifier gui=none guifg=#d46a43 guibg=bg      ctermfg=Green
 highlight Ignore     gui=none guifg=bg      guibg=bg      ctermfg=black
 highlight PreProc    gui=none guifg=#1B4F7F guibg=bg      ctermfg=Green
 highlight Special    gui=none guifg=#0f69a1 guibg=bg      ctermfg=DarkMagenta
