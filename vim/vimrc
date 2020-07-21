@@ -45,8 +45,8 @@ call vundle#end()
 nnoremap <F2> :buffers<CR>:buffer<SPACE>
 nnoremap <F3> :NERDTreeToggle<CR>
 
-nnoremap <F4> :!make clean<CR>
-nnoremap <F5> :!make<CR>
+"nnoremap <F4> :!make clean<CR>
+"nnoremap <F5> :!make<CR>
 
 nnoremap <F7> :cs reset<CR>
 
