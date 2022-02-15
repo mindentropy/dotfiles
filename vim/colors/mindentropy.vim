@@ -59,7 +59,9 @@ highlight PMenuThumb ctermbg=white ctermfg=red
 
 " Other
 highlight Directory  gui=none guifg=#3a2984 guibg=bg
-highlight LineNr     gui=none guifg=#d05d10 guibg=#ffffff
+"highlight LineNr     gui=none guifg=#d05d10 guibg=#ffffff
+"highlight LineNr     gui=none guifg=#00008b guibg=#ffffff
+highlight LineNr     gui=none guifg=#445588 guibg=#ffffff
 highlight NonText    gui=none guifg=#ffffff guibg=#ffffff
 highlight SpecialKey gui=none guifg=#c0c0c0 guibg=bg      cterm=none       ctermfg=4
 highlight Title      gui=bold guifg=#1b88cc guibg=bg
@@ -70,21 +72,26 @@ highlight EndOfBuffer gui=none guifg=#ff0000
 highlight Comment    gui=none guifg=#555555 guibg=bg      ctermfg=2
 highlight Constant   gui=none guifg=#00884c guibg=bg      ctermfg=White
 highlight Error      gui=none guifg=#f8f8f8 guibg=#4040ff term=reverse ctermbg=Red    ctermfg=White
-highlight Identifier gui=none guifg=#d46a43 guibg=bg      ctermfg=Green
+"highlight Identifier gui=none guifg=#d46a43 guibg=bg      ctermfg=Green
+highlight Identifier gui=none guifg=#114c2a guibg=bg      ctermfg=Green
 highlight Ignore     gui=none guifg=bg      guibg=bg      ctermfg=black
 highlight PreProc    gui=none guifg=#1B4F7F guibg=bg      ctermfg=Green
-highlight Special    gui=none guifg=#0f69a1 guibg=bg      ctermfg=DarkMagenta
+"highlight Special    gui=none guifg=#0f69a1 guibg=bg      ctermfg=DarkMagenta
+highlight Special    gui=none guifg=#533f1f guibg=bg      ctermfg=DarkMagenta
 "highlight Statement  gui=none guifg=#7d314c guibg=bg      ctermfg=White
 highlight Statement  gui=none guifg=#aa0000 guibg=bg      ctermfg=White
 highlight Todo       gui=none guifg=#ff5050 guibg=#eeeeee   term=standout ctermbg=Yellow ctermfg=Black
-highlight Type       gui=none guifg=#445588 guibg=bg      ctermfg=12
+"highlight Type       gui=none guifg=#445588 guibg=bg      ctermfg=12
+highlight Type       gui=none guifg=#00008b guibg=bg      ctermfg=12
 highlight Underlined gui=none guifg=blue    guibg=bg
-highlight String     gui=none guifg=#007a7c guibg=bg      ctermfg=Yellow
+"highlight String     gui=none guifg=#007a7c guibg=bg      ctermfg=Yellow
+highlight String     gui=none guifg=#004055 guibg=bg      ctermfg=Yellow
 highlight Number     gui=none guifg=#db0a5b guibg=bg      ctermfg=White
 highlight StorageClass gui=none guifg=#aa0000 guibg=bg	ctermfg=White
 highlight Label gui=none guifg=#008080 guibg=bg ctermfg=White
 "highlight Function gui=none guifg=#114c2a guibg=bg ctermfg=Black
-highlight Function gui=none guifg=#134d13 guibg=bg ctermfg=Black
+"highlight Function gui=none guifg=#134d13 guibg=bg ctermfg=Black
+highlight Function gui=none guifg=#600060 guibg=bg ctermfg=Black
 highlight Operator guifg=#d43900
 
 if !has("gui_running")

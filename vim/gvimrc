@@ -19,35 +19,40 @@
 "colorscheme torte
 "colorscheme koehler
 "colorscheme eclipse
+"set bg=dark
 "colorscheme desert
 "set bg=dark
 "colorscheme desert_mindentropy
-"colorscheme mindentropy
+set bg=light
+colorscheme mindentropy
 "colorscheme asmanian2
 "set termguicolors
 "colorscheme desert
-colorscheme mindentropy
+"colorscheme solarized
 "let ayucolor="light"
 "colorscheme ayu
-set bg=light
+"colorscheme slate
+"set bg=light
+"set bg=dark
 
 if filereadable("/etc/vim/gvimrc.local")
   source /etc/vim/gvimrc.local
 endif
 
 "set guifont=Fira\ Code\ Medium\ 21
-"set guifont=Inconsolata\ Medium\ 26
+set guifont=Inconsolata\ Medium\ 22
+"set guifont=Anonymous\ Pro\ 26
 "set guifont=Bitstream\ Vera\ Sans\ Mono\ 23
-"set guifont=Ubuntu\ Mono\ 20
-set guifont=Ubuntu\ Mono\ 29
-"set guifont=Source\ Code\ Pro\ Medium\ 23
+"set guifont=Ubuntu\ Mono\ 28
+"set guifont=Source\ Code\ Pro\ Medium\ 24
 "set guifont=Fantasque\ Sans\ Mono\ 24
 "set guifont=Hermit\ 22
+"set guifont=IBM\ Plex\ Mono\ weight=450\ 26
 set guicursor=a:blinkon0
 set guioptions-=m "Remove menubar
 set guioptions-=T "Remove toolbar
-"set guicursor=a:blinkon300
-"set guicursor=a:blinkoff300
+set guicursor=a:blinkon300
+set guicursor=a:blinkoff300
 set vb t_vb=
 
 "set cul

@@ -9,7 +9,7 @@ set autowriteall
 set incsearch
 set hidden
 syntax on
-set background=light
+set background=dark
 
 set cst
 set guioptions-=m "Remove menu bar
@@ -29,6 +29,9 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'godlygeek/tabular'
 Plugin 'majutsushi/tagbar'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'morhetz/gruvbox'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 
@@ -44,7 +47,9 @@ call vundle#end()
 
 nnoremap <F2> :buffers<CR>:buffer<SPACE>
 nnoremap <F3> :NERDTreeToggle<CR>
+nnoremap <C-n> :NERDTreeMirror<CR>:NERDTreeFocus<CR>
 
+nnoremap <F4> :set nu! rnu!<CR>
 "nnoremap <F4> :!make clean<CR>
 "nnoremap <F5> :!make<CR>
 
@@ -87,3 +92,9 @@ let g:airline_theme='cobalt2'
 augroup filetypedetect
 	au! BufRead,BufNewFile *.m,*.oct set filetype=octave
 augroup END
+
+"augroup numbertoggle
+"  autocmd!
+"  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
+"  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
+"augroup END
