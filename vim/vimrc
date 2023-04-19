@@ -80,7 +80,7 @@ nnoremap <S-F9> 9gt
 
 
 set laststatus=1
-set mousehide
+"set mousehide
 set autowriteall
 set noswapfile
 "set mousefocus

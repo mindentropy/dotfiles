@@ -9,9 +9,9 @@ bind k focus up
 bind t focus top
 bind b focus bottom
 
-deflog on
-logtstamp on
-logfile screen-output.%Y%m%d.log
-logfile flush 1
-logtstamp after 5
-log on
+#deflog on
+#logtstamp on
+#logfile screen-output.%Y%m%d.log
+#logfile flush 1
+#logtstamp after 5
+#log on
