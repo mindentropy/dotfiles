@@ -9,7 +9,6 @@ set autowriteall
 set incsearch
 set hidden
 syntax on
-set background=dark
 
 set cst
 set guioptions-=m "Remove menu bar
