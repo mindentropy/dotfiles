@@ -41,8 +41,9 @@ if filereadable("/etc/vim/gvimrc.local")
   source /etc/vim/gvimrc.local
 endif
 
+"set guifont=Agave\ 23
 "set guifont=Fira\ Code\ weight=453\ 19
-set guifont=Inconsolata\ Medium\ 22
+"set guifont=Inconsolata\ Medium\ 23
 "set guifont=Anonymous\ Pro\ 20
 "set guifont=Bitstream\ Vera\ Sans\ Mono\ 23
 "set guifont=Ubuntu\ Mono\ 28
@@ -51,10 +52,12 @@ set guifont=Inconsolata\ Medium\ 22
 "set guifont=Hermit\ 22
 "set guifont=IBM\ Plex\ Mono\ weight=474\ 19
 "set guifont=PT\ Mono\ 19
+set guifont=0xProto\ 21
 set foldmethod=syntax
 set guicursor=a:blinkon0
 set guioptions-=m "Remove menubar
 set guioptions-=T "Remove toolbar
+set guioptions+=k
 set guicursor=a:blinkon300
 set guicursor=a:blinkoff300
 set vb t_vb=
