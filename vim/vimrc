@@ -10,7 +10,11 @@ set incsearch
 set hidden
 syntax on
 
+set nu rnu
+
 set cst
+set printoptions=number:y
+set printfont=0xProto\ 21
 
 call plug#begin()
 Plug 'preservim/nerdtree'
@@ -18,12 +22,14 @@ Plug 'ervandew/supertab'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'godlygeek/tabular'
-Plug 'majutsushi/tagbar'
+Plug 'preservim/tagbar'
 Plug 'altercation/vim-colors-solarized'
 Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-fugitive'
 "Plug 'prabirshrestha/vim-lsp'
 "Plug 'mattn/vim-lsp-settings'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 
@@ -70,16 +76,17 @@ let NERDTreeWinPos="right"
 let NERDTreeQuitOnOpen=1
 let g:autosave=1
 let g:airline_theme='cobalt2'
+let $BAT_THEME='Coldark-Cold'
 
 augroup filetypedetect
 	au! BufRead,BufNewFile *.m,*.oct set filetype=octave
 augroup END
 
-"augroup numbertoggle
-"  autocmd!
-"  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
-"  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
-"augroup END
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
+  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
+augroup END
 
 "if executable('pylsp')
 "    " pip install python-lsp-server
