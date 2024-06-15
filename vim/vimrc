@@ -3,7 +3,7 @@ set showcmd
 set showmatch
 set tabstop=4
 set hlsearch
-set ai
+"set ai
 set mouse=a
 set autowriteall
 set incsearch
@@ -28,6 +28,8 @@ Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-fugitive'
 "Plug 'prabirshrestha/vim-lsp'
 "Plug 'mattn/vim-lsp-settings'
+Plug 'Shougo/unite.vim'
+Plug 'devjoe/vim-codequery'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 call plug#end()
@@ -66,7 +68,16 @@ nnoremap <S-F7> 7gt
 nnoremap <S-F8> 8gt
 nnoremap <S-F9> 9gt
 
-set foldmethod=syntax
+nnoremap <space>c :CodeQueryMenu Unite Full<CR>
+nnoremap <space>; :CodeQueryMenu Unite Magic<CR>
+
+nnoremap <space>\ :CodeQueryMenu Unite Magic<CR>A
+
+nnoremap <space><CR> :CodeQuery Symbol<CR>
+
+nnoremap <space>t :CodeQuery Caller<CR>:CodeQueryFilter test_<CR>
+
+"set foldmethod=syntax
 set laststatus=1
 "set mousehide
 set autowriteall
@@ -77,6 +88,9 @@ let NERDTreeQuitOnOpen=1
 let g:autosave=1
 let g:airline_theme='cobalt2'
 let $BAT_THEME='Coldark-Cold'
+let g:codequery_trigger_build_db_when_db_not_found=1
+let g:codequery_find_text_from_current_file_dir=0
+let g:codequery_auto_switch_to_find_text_for_wrong_filetype=0
 
 augroup filetypedetect
 	au! BufRead,BufNewFile *.m,*.oct set filetype=octave
