@@ -3,28 +3,33 @@ set showcmd
 set showmatch
 set tabstop=4
 set hlsearch
-"set ai
 set mouse=a
 set autowriteall
 set incsearch
 set hidden
+set smoothscroll
+set noshowmode
+
 syntax on
 
 set nu rnu
-
 set cst
-set printoptions=number:y
-set printfont=0xProto\ 21
+set printoptions=number:y,duplex:long,paper:A4,syntax:a
+set printfont=0xProto\ 25
+
+set bg=dark
+"set bg=light
 
 call plug#begin()
 Plug 'preservim/nerdtree'
+Plug 'tpope/vim-unimpaired'
 Plug 'ervandew/supertab'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'godlygeek/tabular'
 Plug 'preservim/tagbar'
 Plug 'altercation/vim-colors-solarized'
-Plug 'morhetz/gruvbox'
+"Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-fugitive'
 "Plug 'prabirshrestha/vim-lsp'
 "Plug 'mattn/vim-lsp-settings'
@@ -32,32 +37,43 @@ Plug 'Shougo/unite.vim'
 Plug 'devjoe/vim-codequery'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'sainnhe/gruvbox-material'
+Plug 'Yggdroot/indentLine'
+Plug 'ycm-core/YouCompleteMe'
+Plug 'miyakogi/conoline.vim'
+Plug 'https://github.com/gnu-octave/vim-octave.git', {'for': 'octave'}
+
 call plug#end()
+
+"Put all the indentation settings here as VIM Plug sets its own
+"indentation settings
+filetype indent off
+set noai
+set nosi
+set nocin
+
+
+if has('termguicolors')
+	set termguicolors
+endif
 
 
 nnoremap <F2> :buffers<CR>:buffer<SPACE>
 nnoremap <F3> :NERDTreeToggle<CR>
 nnoremap <C-n> :NERDTreeMirror<CR>:NERDTreeFocus<CR>
-
 nnoremap <F4> :set nu! rnu!<CR>
 "nnoremap <F4> :!make clean<CR>
 "nnoremap <F5> :!make<CR>
-
 nnoremap <F7> :cs reset<CR>
-
-nnoremap <F9> :vnew<CR>:read !svn diff<CR>:set syntax=diff buftype=nofile<CR>gg
-
+nmap <F8> :TagbarToggle<CR>
+"nnoremap <F9> :vnew<CR>:read !svn diff<CR>:set syntax=diff buftype=nofile<CR>gg
 nnoremap <F11> :cscope<SPACE>add<SPACE>cscope.out<CR>
 nnoremap <F12> :cs<SPACE>reset<CR>
-
 nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
-
-nmap <F8> :TagbarToggle<CR>
 
 nnoremap <C-S-t> :tabnew<CR>
 nnoremap <S-h> gT
 nnoremap <S-l> gt
-
 nnoremap <S-F1> 1gt
 nnoremap <S-F2> 2gt
 nnoremap <S-F3> 3gt
@@ -70,31 +86,57 @@ nnoremap <S-F9> 9gt
 
 nnoremap <space>c :CodeQueryMenu Unite Full<CR>
 nnoremap <space>; :CodeQueryMenu Unite Magic<CR>
-
 nnoremap <space>\ :CodeQueryMenu Unite Magic<CR>A
-
 nnoremap <space><CR> :CodeQuery Symbol<CR>
-
 nnoremap <space>t :CodeQuery Caller<CR>:CodeQueryFilter test_<CR>
 
-"set foldmethod=syntax
+nnoremap <leader>jd :rightbelow vertical YcmCompleter GoToDefinition<CR>
+nnoremap <leader>jf :rightbelow vertical YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>jg :rightbelow vertical YcmCompleter GoTo<CR>
+
+"nnoremap <silent>[b :bp<CR>
+"nnoremap <silent>]b :bn<CR>
+"nnoremap <silent>[B :bf<CR>
+"nnoremap <silent>]B :bl<CR>
+
+
+let g:conoline_auto_enable=1
+let g:conoline_use_colorscheme_default_normal=1
+let g:conoline_use_colorscheme_default_insert=1
+set foldmethod=syntax
 set laststatus=1
 "set mousehide
 set autowriteall
 set noswapfile
+set smoothscroll
 "set mousefocus
+let g:indentLine_enabled=1
 let NERDTreeWinPos="right"
 let NERDTreeQuitOnOpen=1
 let g:autosave=1
-let g:airline_theme='cobalt2'
-let $BAT_THEME='Coldark-Cold'
+let g:airline_theme='gruvbox_material'
+"let g:airline_theme='tomorrow'
+let g:airline_section_x=''
+let g:airline_section_y='BN: %{bufnr("%")}'
+let $BAT_THEME='gruvbox-dark'
 let g:codequery_trigger_build_db_when_db_not_found=1
 let g:codequery_find_text_from_current_file_dir=0
 let g:codequery_auto_switch_to_find_text_for_wrong_filetype=0
 
-augroup filetypedetect
-	au! BufRead,BufNewFile *.m,*.oct set filetype=octave
-augroup END
+"hard, medium(default), soft
+let g:gruvbox_material_background="hard"
+"material(default), mix, original
+let g:gruvbox_material_foreground="original"
+let g:gruvbox_material_better_performance=1
+let g:gruvbox_material_visual="green background"
+let g:gruvbox_material_ui_contrast="high"
+
+let g:ycm_goto_buffer_command="split-or-existing-window"
+let g:ycm_filepath_completion_use_working_dir=1
+
+"augroup filetypedetect
+"	au! BufRead,BufNewFile *.m,*.oct set filetype=octave
+"augroup END
 
 augroup numbertoggle
   autocmd!
@@ -139,3 +181,8 @@ augroup END
 "    " call s:on_lsp_buffer_enabled only for languages that has the server registered.
 "    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 "augroup END
+"
+"colorscheme Tomorrow-Night-Blue
+"colorscheme mindentropy
+
+colorscheme gruvbox-material

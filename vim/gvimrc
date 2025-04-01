@@ -23,8 +23,9 @@
 "colorscheme desert
 "set bg=dark
 "colorscheme desert_mindentropy
-set bg=light
-colorscheme mindentropy
+"set bg=light
+"colorscheme mindentropy
+"colorscheme Tomorrow-Night-Blue
 "set bg=dark
 "colorscheme jellybeans_mindentropy
 "colorscheme asmanian2
