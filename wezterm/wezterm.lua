@@ -7,8 +7,9 @@ local config = wezterm.config_builder()
 -- This is where you actually apply your config choices
 
 -- Changing color scheme
--- config.color_scheme = "Gruvbox light, hard (base16)"
-config.color_scheme = "Gruvbox dark, hard (base16)"
+config.color_scheme = "Gruvbox light, hard (base16)"
+-- config.color_scheme = "Ef-Frost"
+-- config.color_scheme = "Gruvbox dark, hard (base16)"
 -- config.color_scheme = "Gruvbox dark, pale (base16)"
 -- config.color_scheme = "Gruvbox dark, soft (base16)"
 -- config.color_scheme = "Gruvbox dark, medium (base16)"
@@ -16,15 +17,18 @@ config.color_scheme = "Gruvbox dark, hard (base16)"
 -- config.color_scheme = "Tomorrow Night Blue"
 
 config.colors = {
---	foreground = "#292625",
-	foreground = "#ebdbb2",
+	foreground = "#292625", -- For light bg
+--	foreground = "#ebdbb2", -- For dark bg
 	cursor_border = "#e40000",
 	cursor_bg = "#e40000",
 }
 
-config.font = wezterm.font("Agave", 
+config.font = wezterm.font("Iosevka Term SS16",
 					{stretch = "Normal", weight = "Medium",}
 				)
+--config.font = wezterm.font("Iosevka Term SS16",
+--					{stretch = "Normal", weight = "Normal",}
+--				)
 config.font_size = 23.5
 config.font_rules = {
 -- Bold but not italic
@@ -33,7 +37,7 @@ config.font_rules = {
 	italic = false,
 
 	font = wezterm.font {
-		family = "Agave",
+		family = "Iosevka Term SS16",
 		weight = "Medium",
 		stretch = "Normal",
     }
@@ -44,7 +48,7 @@ config.font_rules = {
 	intensity = 'Bold',
 	italic = true,
 	font = wezterm.font {
-		family = "Agave",
+		family = "Iosevka Term SS16",
 		weight = "Medium",
 		italic = true,
 		stretch = "Normal",
@@ -54,8 +58,11 @@ config.font_rules = {
 
 -- config.freetype_load_flags = "NO_HINTING"
 config.freetype_load_flags = "DEFAULT"
-
-config.freetype_load_target= "Normal"
+-- config.freetype_load_target = "Light"
+config.freetype_load_target = "Normal"
+-- config.freetype_render_target = "Normal"
+config.freetype_render_target = "Normal"
+config.front_end = "WebGpu"
 
 config.scrollback_lines = 100000
 config.harfbuzz_features = { 'calt=1', 'clig=1', 'liga=1', 'CLIK=1' }

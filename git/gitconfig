@@ -3,13 +3,18 @@
 #	email = 
 [core]
 	editor = vim
+	excludesFile = ~/.gitignore
 [alias]
 	co = checkout
 	ci = commit
 	st = status
 	br = branch
-	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	lg = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short --decorate
 	type = cat-file -t
 	dump = cat-file -p
 [color]
 	ui = auto
+[http]
+	sslVerify = true
+[credential]
+	helper = store

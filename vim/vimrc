@@ -17,8 +17,13 @@ set cst
 set printoptions=number:y,duplex:long,paper:A4,syntax:a
 set printfont=0xProto\ 25
 
-set bg=dark
-"set bg=light
+
+" Uncomment the following to have Vim jump to the last position when
+" reopening a file
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+"set bg=dark
+set bg=light
 
 call plug#begin()
 Plug 'preservim/nerdtree'
@@ -118,7 +123,7 @@ let g:airline_theme='gruvbox_material'
 "let g:airline_theme='tomorrow'
 let g:airline_section_x=''
 let g:airline_section_y='BN: %{bufnr("%")}'
-let $BAT_THEME='gruvbox-dark'
+let $BAT_THEME='gruvbox-light'
 let g:codequery_trigger_build_db_when_db_not_found=1
 let g:codequery_find_text_from_current_file_dir=0
 let g:codequery_auto_switch_to_find_text_for_wrong_filetype=0
