@@ -42,7 +42,8 @@ if filereadable("/etc/vim/gvimrc.local")
   source /etc/vim/gvimrc.local
 endif
 
-set guifont=Geist\ Mono\ Medium\ 22
+set guifont=0xProto\ 17
+"set guifont=Geist\ Mono\ Medium\ 22
 "set guifont=Agave\ 23
 "set guifont=Fira\ Code\ weight=453\ 19
 "set guifont=Inconsolata\ Medium\ 23

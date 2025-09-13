@@ -1,7 +1,12 @@
 set nu
 set showcmd
 set showmatch
-set tabstop=4
+
+set tabstop=8
+set softtabstop=4
+set shiftwidth=4
+set noexpandtab
+
 set hlsearch
 set mouse=a
 set autowriteall
@@ -9,18 +14,20 @@ set incsearch
 set hidden
 set smoothscroll
 set noshowmode
-
+set encoding=UTF-8
 syntax on
 
 set nu rnu
 set cst
 set printoptions=number:y,duplex:long,paper:A4,syntax:a
 set printfont=0xProto\ 25
+set scroll=1
 
 
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
-au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") |
+                  \ exe "normal! g'\"" | endif
 
 "set bg=dark
 set bg=light
@@ -34,11 +41,13 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'godlygeek/tabular'
 Plug 'preservim/tagbar'
 Plug 'altercation/vim-colors-solarized'
+Plug 'Shougo/unite.vim'
+"Plug 'kyoz/purify', {'rtp': 'vim'}
 "Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-fugitive'
 "Plug 'prabirshrestha/vim-lsp'
 "Plug 'mattn/vim-lsp-settings'
-Plug 'Shougo/unite.vim'
+Plug 'mileszs/ack.vim'
 Plug 'devjoe/vim-codequery'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -46,7 +55,12 @@ Plug 'sainnhe/gruvbox-material'
 Plug 'Yggdroot/indentLine'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'miyakogi/conoline.vim'
+Plug 'https://gitlab.com/protesilaos/tempus-themes-vim.git'
 Plug 'https://github.com/gnu-octave/vim-octave.git', {'for': 'octave'}
+"Plug 'tjdevries/overlength.vim'
+Plug 'ryanoasis/vim-devicons'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 
 call plug#end()
 
@@ -56,13 +70,20 @@ filetype indent off
 set noai
 set nosi
 set nocin
-
+set textwidth=80
 
 if has('termguicolors')
-	set termguicolors
+set termguicolors
 endif
 
-
+"Mappings from LVTHW exercises
+"In insert mode
+"nmap <c-u> viwU
+"imap <c-u> <esc>viwUi
+"imap <c-u> <esc><c-u>i
+"-----------------------------
+" Default leader key is \
+map <leader>D :put =strftime('%Y-%m-%d %H:%M:%S')<CR>
 nnoremap <F2> :buffers<CR>:buffer<SPACE>
 nnoremap <F3> :NERDTreeToggle<CR>
 nnoremap <C-n> :NERDTreeMirror<CR>:NERDTreeFocus<CR>
@@ -77,8 +98,8 @@ nnoremap <F12> :cs<SPACE>reset<CR>
 nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 
 nnoremap <C-S-t> :tabnew<CR>
-nnoremap <S-h> gT
-nnoremap <S-l> gt
+"nnoremap <S-h> gT
+"nnoremap <S-l> gt
 nnoremap <S-F1> 1gt
 nnoremap <S-F2> 2gt
 nnoremap <S-F3> 3gt
@@ -104,50 +125,98 @@ nnoremap <leader>jg :rightbelow vertical YcmCompleter GoTo<CR>
 "nnoremap <silent>[B :bf<CR>
 "nnoremap <silent>]B :bl<CR>
 
-
-let g:conoline_auto_enable=1
-let g:conoline_use_colorscheme_default_normal=1
-let g:conoline_use_colorscheme_default_insert=1
 set foldmethod=syntax
-set laststatus=1
+set laststatus=0
 "set mousehide
 set autowriteall
 set noswapfile
 set smoothscroll
+set autoread
 "set mousefocus
-let g:indentLine_enabled=1
-let NERDTreeWinPos="right"
-let NERDTreeQuitOnOpen=1
-let g:autosave=1
-let g:airline_theme='gruvbox_material'
-"let g:airline_theme='tomorrow'
-let g:airline_section_x=''
-let g:airline_section_y='BN: %{bufnr("%")}'
-let $BAT_THEME='gruvbox-light'
-let g:codequery_trigger_build_db_when_db_not_found=1
-let g:codequery_find_text_from_current_file_dir=0
-let g:codequery_auto_switch_to_find_text_for_wrong_filetype=0
+
+"VIM devicons configuration
+let g:webdevicons_enable = 1
+let g:webdevicons_enable_nerdtree = 1
+let g:webdevicons_enable_airline_tabline = 1
+let g:webdevicons_enable_airline_statusline = 1
+let g:webdevicons_conceal_nerdtree_brackets = 1
+let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
+
+
+let g:conoline_auto_enable = 1
+let g:conoline_use_colorscheme_default_normal = 1
+let g:conoline_use_colorscheme_default_insert = 1
+let g:indentLine_enabled = 1
+
+let NERDTreeWinPos = "right"
+let NERDTreeQuitOnOpen = 1
+
+let g:autosave = 1
+
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'molokai'
+let g:airline_section_x = ''
+let g:airline_section_y = 'BN: %{bufnr("%")}'
+let g:airline_section_error = ''
+let g:airline_section_warning = ''
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+let g:airline#extensions#tagbar#enabled = 1
+
+let $BAT_THEME = 'ansi'
+
+let g:codequery_find_text_cmd = "Rg!"
+let g:codequery_trigger_build_db_when_db_not_found = 1
+let g:codequery_find_text_from_current_file_dir = 0
+let g:codequery_auto_switch_to_find_text_for_wrong_filetype = 0
 
 "hard, medium(default), soft
-let g:gruvbox_material_background="hard"
+let g:gruvbox_material_background = "hard"
 "material(default), mix, original
-let g:gruvbox_material_foreground="original"
-let g:gruvbox_material_better_performance=1
-let g:gruvbox_material_visual="green background"
-let g:gruvbox_material_ui_contrast="high"
+let g:gruvbox_material_foreground = "original"
+let g:gruvbox_material_better_performance = 1
+let g:gruvbox_material_visual = "red background"
+let g:gruvbox_material_ui_contrast = "high"
+let g:gruvbox_material_colors_override = {
+		\ 'fg0': ['#292625', 237],
+		\ 'green': ['#646e18', 100],
+		\ 'grey2': ['#534a43', 246],
+		\ }
+
+function! s:gruvbox_material_custom() abort
+    let l:background = g:gruvbox_material_background "hard
+    let l:foreground = g:gruvbox_material_foreground "original
+
+    let l:palette = gruvbox_material#get_palette(l:background, l:foreground, {})
+"    call gruvbox_material#highlight(
+"    	\ 'Normal', ['#292625', 237], ['#fffadc', 230]) Foreground: #3c3836
+"    call gruvbox_material#highlight('Comment',
+"        \ ['#000062', 246], ['NONE', 'NONE'])
+endfunction
+
+augroup GruvboxMaterialCustom
+	autocmd!
+	autocmd ColorScheme gruvbox-material call s:gruvbox_material_custom()
+augroup END
 
 let g:ycm_goto_buffer_command="split-or-existing-window"
 let g:ycm_filepath_completion_use_working_dir=1
 
-"augroup filetypedetect
-"	au! BufRead,BufNewFile *.m,*.oct set filetype=octave
-"augroup END
+augroup filetypedetect
+	au! BufRead,BufNewFile *.m,*.oct set filetype=octave
+augroup END
+
+augroup filetypedetect
+	au! BufRead,BufNewFile *.inc set filetype=c
+augroup END
 
 augroup numbertoggle
   autocmd!
-  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
-  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
+  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" |
+        \ set rnu   | endif
+  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu | set nornu | endif
 augroup END
+
 
 "if executable('pylsp')
 "    " pip install python-lsp-server
@@ -183,11 +252,14 @@ augroup END
 "
 "augroup lsp_install
 "    au!
-"    " call s:on_lsp_buffer_enabled only for languages that has the server registered.
+"    " call s:on_lsp_buffer_enabled only for languages that has the
+"    " server registered.
 "    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 "augroup END
 "
 "colorscheme Tomorrow-Night-Blue
 "colorscheme mindentropy
 
-colorscheme gruvbox-material
+"colorscheme gruvbox-material
+colorscheme tempus_totus
+"colorscheme tempus_tempest
